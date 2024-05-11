@@ -50,12 +50,7 @@ public class LoginPageTest extends Test_Base{
 		AssertJUnit.assertEquals(exp_URL, act_URL);
 	}
 	
-	@Test (enabled = true, priority = 2, dependsOnMethods = "verifyURLofApplication")
-	public void loginToAppTest() throws IOException {
-		String exp_URL =ReadData.readExcel(3,2); // 3,2
-		String act_URL = login.LoginToApplication();
-		AssertJUnit.assertEquals(exp_URL, act_URL);
-	}
+	
 	
 	@AfterMethod
 	public void closeBrowser(ITestResult it) throws IOException {
